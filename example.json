@@ -1,0 +1,18 @@
+{
+  "title": "Une salle immersive inspirée d’Immersia",
+  "description": "IMMERSION documente la rénovation du CAVE de l’IRISA avec 14 projecteurs Barco ; le site de la plateforme Immersia précise la référence F90-4K13. Cette configuration publique n’est pas une nomenclature datée ni la preuve du parc actuel. Le calcul présenté est un scénario pédagogique limité à la projection : 1 200 heures par an pendant 5 ans sont des hypothèses, pas des durées d’usage constatées à Immersia. La puissance retenue est la valeur nominale fabricant de 1 500 W par projecteur, pas une mesure sur le site. Le facteur électrique français choisi est supposé constant pendant la simulation. Les stations HP, GPU, tracking, son, réseau, refroidissement et autres équipements sont exclus. La fabrication des projecteurs reste non calculée, faute de facteur public compatible trouvé ; le résultat ne représente donc pas l’empreinte de la salle réelle.",
+  "source": "https://www.immersion.fr/cas-client/irisa/",
+  "technicalSource": "https://immersia.irisa.fr/",
+  "input": {
+    "projectName": "Immersia — scénario pédagogique de projection",
+    "hoursPerYear": 1200,
+    "years": 5,
+    "electricityFactorId": "fr-ademe-2025",
+    "items": [
+      {
+        "productId": "barco-f90-4k13",
+        "quantity": 14
+      }
+    ]
+  }
+}
