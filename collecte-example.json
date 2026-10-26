@@ -1,6 +1,6 @@
 {
   "title": "Atelier de revue 3D — pièces collectées par IMMERSION",
-  "description": "Exemple pédagogique de conception, pas une installation livrée ni une nomenclature validée par IMMERSION. Il associe 1 station HP, 1 projecteur Barco, 10 paires de lunettes VOLFONI, 1 émetteur et 1 kit de calibration. Les quantités et les 1 200 h/an pendant 5 ans sont des hypothèses. Compatibilité 3D, optique, puissance réelle, configuration CPU/GPU et usage du kit restent à valider ; la présence de ces références n'est pas une validation d'intégration. La station HP conserve son profil annuel fabricant explicitement accepté de 310,2 kWh/an : ce profil ne dépend pas des heures du projecteur. Le résultat demeure incomplet car il manque la fabrication du projecteur et du kit, et l'usage des lunettes, de l'émetteur et du kit. Livraison, interventions et fin de vie sont hors du périmètre.",
+  "description": "Exemple pédagogique de conception, pas une installation livrée ni une nomenclature validée par IMMERSION. Il associe 1 station HP, 1 projecteur Barco, 10 paires de lunettes VOLFONI, 1 émetteur et 1 kit de calibration. Les quantités et les 1 200 h/an pendant 5 ans sont des hypothèses. Compatibilité 3D, optique, puissance réelle, configuration CPU/GPU et usage du kit restent à valider ; la présence de ces références n'est pas une validation d'intégration. La station HP conserve son profil annuel fabricant retenu comme hypothèse de simulation de 310,2 kWh/an : ce profil ne dépend pas des heures du projecteur. Le résultat demeure incomplet car il manque la fabrication du projecteur et du kit, et l'usage des lunettes, de l'émetteur et du kit. Livraison, interventions et fin de vie sont hors du périmètre.",
   "source": "Pièces fournisseurs transmises par IMMERSION et relues le 26 octobre 2026 ; originaux conservés dans le dossier privé de collecte.",
   "input": {
     "projectName": "Atelier 3D — exemple de collecte non validé",
@@ -12,7 +12,8 @@
         "productId": "hp-z4-g5-pcf-europe",
         "quantity": 1,
         "usageMode": "annual",
-        "annualScenarioConfirmed": true
+        "annualScenarioConfirmed": true,
+        "annualScenarioBasis": "simulation-assumption"
       },
       {
         "productId": "barco-f90-4k13",
@@ -31,7 +32,13 @@
         "productId": "vioso-calibration-kit",
         "quantity": 1
       }
-    ]
+    ],
+    "sensitivity": {
+      "productId": "barco-f90-4k13",
+      "hoursLow": 900,
+      "hoursHigh": 1500,
+      "justification": "Choix pédagogiques de planification : comparer trois durées annuelles du projecteur (900, 1200 et 1500 h), à quantité, puissance nominale, durée de 5 ans et profil annuel HP constants. Ces heures ne sont pas des observations de terrain."
+    }
   },
   "documentedCheck": {
     "manufacturingKgCO2e": 277.18,
@@ -61,5 +68,23 @@
     "volfoni-glasses-ges-immersion",
     "volfoni-rf50-ges-immersion",
     "vioso-calibration-origin-2019-immersion"
-  ]
+  ],
+  "sensitivityCheck": {
+    "hours": [
+      900,
+      1200,
+      1500
+    ],
+    "documentedKgCO2e": [
+      659.8561,
+      763.5811,
+      867.3061
+    ],
+    "energyKWh": [
+      8301,
+      10551,
+      12801
+    ],
+    "note": "Scénarios de planification, sans probabilité, intervalle de confiance ou validation terrain. Cinq postes restent inconnus."
+  }
 }
