@@ -1,0 +1,65 @@
+{
+  "title": "Atelier de revue 3D — pièces collectées par IMMERSION",
+  "description": "Exemple pédagogique de conception, pas une installation livrée ni une nomenclature validée par IMMERSION. Il associe 1 station HP, 1 projecteur Barco, 10 paires de lunettes VOLFONI, 1 émetteur et 1 kit de calibration. Les quantités et les 1 200 h/an pendant 5 ans sont des hypothèses. Compatibilité 3D, optique, puissance réelle, configuration CPU/GPU et usage du kit restent à valider ; la présence de ces références n'est pas une validation d'intégration. La station HP conserve son profil annuel fabricant explicitement accepté de 310,2 kWh/an : ce profil ne dépend pas des heures du projecteur. Le résultat demeure incomplet car il manque la fabrication du projecteur et du kit, et l'usage des lunettes, de l'émetteur et du kit. Livraison, interventions et fin de vie sont hors du périmètre.",
+  "source": "Pièces fournisseurs transmises par IMMERSION et relues le 26 octobre 2026 ; originaux conservés dans le dossier privé de collecte.",
+  "input": {
+    "projectName": "Atelier 3D — exemple de collecte non validé",
+    "hoursPerYear": 1200,
+    "years": 5,
+    "electricityFactorId": "fr-ademe-2025",
+    "items": [
+      {
+        "productId": "hp-z4-g5-pcf-europe",
+        "quantity": 1,
+        "usageMode": "annual",
+        "annualScenarioConfirmed": true
+      },
+      {
+        "productId": "barco-f90-4k13",
+        "quantity": 1,
+        "hoursPerYear": 1200
+      },
+      {
+        "productId": "volfoni-glasses-rf-vr-hc",
+        "quantity": 10
+      },
+      {
+        "productId": "volfoni-activhub-rf50",
+        "quantity": 1
+      },
+      {
+        "productId": "vioso-calibration-kit",
+        "quantity": 1
+      }
+    ]
+  },
+  "documentedCheck": {
+    "manufacturingKgCO2e": 277.18,
+    "energyKWh": 10551,
+    "hpUseKgCO2e": 71.5011,
+    "projectorUseKgCO2e": 414.9,
+    "useKgCO2e": 486.4011,
+    "documentedKgCO2e": 763.5811,
+    "totalKgCO2e": null,
+    "note": "Valeurs internes de contrôle arithmétique ; afficher environ 764 kg CO2e de contributions documentées, sans total complet ni intervalle d'incertitude. La fabrication HP est approchée et les valeurs VOLFONI sont des estimations non vérifiées."
+  },
+  "comparison": {
+    "title": "Réduire le fonctionnement du projecteur de 1 200 à 900 h/an",
+    "description": "Même service utile à confirmer : les 300 h évitées doivent correspondre à des heures inutiles. Variation limitée à la ligne projecteur ; le profil annuel HP reste inchangé. Gain théorique d'électricité active, sans garantie de gain réel à défaut de mesure.",
+    "productId": "barco-f90-4k13",
+    "hoursPerYearBefore": 1200,
+    "hoursPerYearAfter": 900,
+    "energySavedKWh": 2250,
+    "useBeforeKgCO2e": 414.9,
+    "useAfterKgCO2e": 311.175,
+    "avoidedUseKgCO2e": 103.725,
+    "years": 5
+  },
+  "sourceIds": [
+    "hp-z4-g5-pcf-2026-immersion",
+    "barco-f90-4k13-spec",
+    "volfoni-glasses-ges-immersion",
+    "volfoni-rf50-ges-immersion",
+    "vioso-calibration-origin-2019-immersion"
+  ]
+}
